@@ -12,7 +12,6 @@ const EditProfile = () => {
   const [password, setPassword] = useState('');
   const navigate = useNavigate();
 
-  // Fetch current user data
   useEffect(() => {
     const fetchProfile = async () => {
       try {
@@ -32,13 +31,11 @@ const EditProfile = () => {
     fetchProfile();
   }, []);
 
-  // Handle input changes
   const handleChange = (e) =>
     setForm({ ...form, [e.target.name]: e.target.value });
 
   const handleFileChange = (e) => setProfilePic(e.target.files[0]);
 
-  // Handle form submission
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
@@ -54,11 +51,11 @@ const EditProfile = () => {
         headers: { Authorization: `Bearer ${token}` },
       });
 
-      alert('✅ Profile updated successfully!');
+      alert('Profile updated successfully!');
       navigate('/profile');
     } catch (err) {
       console.error(err);
-      alert('❌ Failed to update profile.');
+      alert('Failed to update profile.');
     }
   };
 
