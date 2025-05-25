@@ -9,7 +9,6 @@ const Welcome = () => {
     navigate('/register');
   };
 
-  // 5 background images
   const backgrounds = [
     'https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=1350&q=80',
     'https://images.unsplash.com/photo-1502082553048-f009c37129b9?auto=format&fit=crop&w=1350&q=80',
@@ -21,7 +20,6 @@ const Welcome = () => {
 
   const [bgIndex, setBgIndex] = useState(0);
 
-  // Change background every 5 seconds
   useEffect(() => {
     const interval = setInterval(() => {
       setBgIndex((prevIndex) => (prevIndex + 1) % backgrounds.length);
