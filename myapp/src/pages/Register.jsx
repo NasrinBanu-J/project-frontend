@@ -26,9 +26,9 @@ const Register = () => {
   }
 
   try {
-    const res = await api.post('/api/Auth/register', form); // Ensure correct API route
+    const res = await api.post('/api/Auth/register', form); 
 
-    if (res.data?.token) { // Ensure a valid response
+    if (res.data?.token) { 
       localStorage.setItem('token', res.data.token);
       navigate('/home'); 
     } else {
