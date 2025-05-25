@@ -29,11 +29,11 @@ const CreatePost = () => {
         },
       });
 
-      alert('✅ Post created successfully!');
+      alert('Post created successfully!');
       navigate('/home');
     } catch (err) {
       console.error(err);
-      alert('❌ Failed to create post.');
+      alert('Failed to create post.');
     }
   };
 
